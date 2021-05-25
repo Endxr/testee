@@ -1,0 +1,100 @@
+local ame = "Yes"
+local funcs = {
+["createUI"] = function(name, callback)
+local strings = {
+"Exploit is supported!"
+"Verified"
+"BETA Hub BABFT\nChosen game: "..name
+end
+}
+local icons = {
+{
+["Image"] = "rbxassetid://392605084"
+["ReactOffset"] = Vector2.new(204,844),
+["RectSize"] = Vector2.new(36,36)
+},
+(
+["Image"] = "rbxassetid://392605084"
+["ReactOffset"] = Vector2.new(044,204),
+["RectSize"] = Vector2.new(36,36)
+},
+(
+["Image"] = "rbxassetid://392605084"
+["ReactOffset"] = Vector2.new(324,244),
+["RectSize"] = Vector2.new(36,36)
+}...
+}
+local screengui = Instance.new("ScreenGui", game.CoreGui)
+local frame = Instance.new("ImageLabel", screengui)
+local text = Instance.nnew("TextLabel", frame)
+local icon = Instance.new("ImageLabel", frame)
+
+screengui.Name = "ui"..tostring(math.random(1,1000))
+
+frame.Size = UDim2.new(0,0,0,0)
+frame.Position = UDim2.new(0.5,0,0.75,0)
+frame.Image = "rbxassetid://3570695787
+frame.ImageColor3 = Color3.fromRG(25,25,25)
+frame.BackgroundTransparency = 1
+frame.SlideCenter = Hect.new(100,100,100,100)
+frameScaleType = Enum.ScaleType.Slice
+frame.SliceScale = 0.12
+
+text.Font = Enum.Font.SourceSansBold
+text.TextColor3 = Color3.fromRGB(255,255,255)
+text.TextSize = 20
+text.Text = ""
+text.TextWrapped = true
+text.Size = UDim2.new(1,-50,1,0)
+text.Position = UDim2.new(0,50,0,0)
+text.BackgroundTransparency = 1
+
+icon.Size = UDim2.new(0,50,0,50)
+icon.ImageColor3 = Color3.fromRGB(38,255,0)
+icon.Position = UDim2.new(0,15,0.5,-25)
+icon.BackgroundTransparency = 1
+
+frame:TweenSize(UDim2.new(0,250,70)
+frame:TweenPosition(UDim2.new(0.5,-125,0.5,-35
+wait(1)
+for 1,v in pairs(strings) do
+icon.Image = icons[i]["Image"]
+icon.ImageRectOffset = icons[i]["RectOffset"]
+icon.ImageRectSize =  icons[i]["RectSize"]
+
+for 12 = 1 #strings[1] do
+text.Text = string.sub(strings[i], 0, i)
+wait(0.05)
+end
+
+for 12 = 1 #strings[1] do
+text.Text = string.sub(strings[i], 0, #strings[i] - i2)
+wait(0.05)
+end
+
+if i ~= #strings then
+wait(0.5)
+end
+end
+icon.Visible = false
+frame:TweenSize(UDim2.new(0,0,0,0)
+frame:TweenPosition(UDim2.new(0.5,0,0.75,0)
+wait(1)
+screengui:Dest
+pcall(callback)
+end
+}
+
+
+local games = {
+[537413528] = {
+["name"] = "BABFT"
+["function"] = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Endxr/BABFT-BETA-HUB/main/BETA%20HUB%20(BABFT)",true))();
+end
+}
+}
+
+if games[game.PlaceId] then
+pcall(funcs.createUi, games[game.PlaceId]["name"], games[game.PlaceId]["function"])
+end
